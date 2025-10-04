@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffea;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00ffea;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('https://images.unsplash.com/photo-1605902711622-cfb43c44367d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffea; }
+      to { text-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea; }
+    }
+
+    /* Cards Section */
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .card {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card h3 {
+      padding: 15px;
+      margin: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,255,234,0.5);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #777;
+      margin-top: 30px;
+    }
+
+    /* Mobile adjustments */
+    @media(max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">🎮 Gaming Hub</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Games</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the Gaming World</h1>
+      <p>Discover, Play & Conquer!</p>
+    </div>
+  </section>
+
+  <!-- Games Section -->
+  <section class="games">
+    <div class="card">
+      <img src="https://picsum.photos/400/200?random=1" alt="Game 1">
+      <h3>Cyber Quest</h3>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/200?random=2" alt="Game 2">
+      <h3>Battle Arena</h3>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/200?random=3" alt="Game 3">
+      <h3>Night Riders</h3>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/200?random=4" alt="Game 4">
+      <h3>Shadow Strike</h3>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Gaming Hub | Powered by Passion 🎮</p>
+  </footer>
+
+</body>
+</html>
